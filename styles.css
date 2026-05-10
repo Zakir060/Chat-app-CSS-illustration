@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(0, 100%, 100%);
+  color: hsl(271, 36%, 24%);
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;/*icindeki elementler yan yanadi author :mrxak3r*/
+  align-items: center;
+  justify-content: center;
+  gap: 125px;
+  padding: 60px 40px;
+}
+
+.bg-left {
+  position: absolute;
+  top: 0; /*yuxariyla mesafe saxlamir*/
+  left: -90px; /*sola surusdurur*/
+  z-index: -1; /*onde duran bu olmur arxada duran bu olur*/
+  width: 510px;
+  height: 700px;
+  border-radius: 0 0 255px 255px;
+  background: linear-gradient(
+    to bottom, /*yuxaridan asagiya deyissin */
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+}
+.bg-right {
+  position: absolute;
+  right: -180px;
+  bottom: 0;
+  width: 510px;
+  height: 700px;
+  border-radius: 255px 255px 0 0;
+  background-color: hsl(270, 20%, 96%);
+}
+.phone {
+  width: 250px;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: 0 30px 60px rgba(62, 39, 83, 0.25); /*0 olduguna gore merkezde olur 30px asagiya aparir 60px cox olduqca daha soft olur*/
+}
+.phone-screen {
+  position: relative;
+  border-radius: 22px;
+  background-color: hsl(270, 20%, 96%);
+}
+.notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 130px;
+  height: 28px;
+  transform: translateX(-50%);
+  border-radius: 0 0 15px 15px;
+  background-color: hsl(0, 100%, 100%);
+}
+
+.chat-header {
+  display: flex;/*icindeki elementler yan yanadi author :mrxak3r*/
+  align-items: center;
+  gap: 8px;
+  padding: 30px 14px 12px;
+  border-radius: 22px 22px 6px 6px;
+  color: hsl(0, 100%, 100%);
+  background: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+}
+.back {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+.avatar {
+  width: 24px;
+  height: 24px;
+
+  border: 1px solid hsl(0, 100%, 100%);
+  border-radius: 50%;
+}
+.user-info h2 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+}
+.user-info p {
+  margin: 2px 0 0;
+  font-size: 8px;
+  color: hsl(276, 100%, 81%);
+}
+
+.chat-body {
+  padding: 11px 8px 10px;
+}
+.message {
+  max-width: 60%;
+  margin: 0 0 8px;
+  padding: 7px 8px;
+  font-size: 8px;
+  border-radius: 10px;
+}
+
+.left {
+  color: hsl(276, 55%, 52%);
+  background-color: hsl(276, 55%, 94%);
+}
+.right {
+  margin-left: auto;
+  color: hsl(270, 7%, 64%);
+  background-color: hsl(0, 100%, 100%);
+}
+.dost{
+  font-size: 18px;
+  font-weight:700;
+}
+.dog-images {
+  display: flex;/*icindeki elementler yan yanadi author :mrxak3r*/
+  justify-content: flex-end; /*saga surusdurur*/
+  gap: 6px;
+  margin: 16px 0 8px;
+  animation: showMessage 0.6s ease both;
+}
+.dog-images img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+.option {
+  width: 76%;
+  min-height: 34px;
+  display: flex;/*icindeki elementler yan yanadi author :mrxak3r*/
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  border-radius: 12px 12px 12px 4px;
+  color: hsl(0, 100%, 100%);
+  background: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  animation: showMessage 0.6s ease both;
+}
+.circle {
+  width: 12px;
+  height: 12px;
+  border: 1px solid hsl(289, 100%, 72%);
+  border-radius: 50%;
+}
+.option-text {
+  flex: 1;
+  font-size: 8px;
+  color: hsl(276, 100%, 91%);
+}
+
+.option strong {
+  font-size: 12px;
+  font-weight: 700;
+}
+.input-box {
+  display: flex; /*icindeki elementler yan yanadi author :mrxak3r*/
+  margin-top: 14px;
+  padding: 5px 5px 5px 16px;
+  border-radius: 22px;
+  background-color: hsl(0, 100%, 100%);
+}
+
+.input-box input {
+  min-width: 0;
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 9px;
+  color: hsl(271, 36%, 24%);
+}
+.input-box input::placeholder {
+  color: hsl(206, 6%, 79%);
+}
+.input-box button {
+  border-radius: 50%; /* › bu buttonun dairesini hesablayir */
+  color: hsl(0, 100%, 100%);
+  background-color: hsl(271, 36%, 24%);
+}
+.content {
+  width: 445px;
+}
+.content h1 {
+  color: hsl(271, 36%, 24%);
+}
+@keyframes showMessage {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
