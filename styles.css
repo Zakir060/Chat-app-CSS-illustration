@@ -15,8 +15,8 @@ body {
   position: relative;
   overflow: hidden; /*left: -90px; right: -180px; bunlar cole cixmasin deye*/
   display: flex;/*icindeki elementler yan yanadi author :mrxak3r*/
-  align-items: center;
-  justify-content: center;
+  align-items: center;/*hundurlukler eyni olur*/
+  justify-content: center; /*üfüqi ortalanır*/
   gap: 125px;
   padding: 60px 40px;
 }
