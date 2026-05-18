@@ -13,7 +13,7 @@ body {
 .hero {
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /*left: -90px; right: -180px; bunlar cole cixmasin deye*/
   display: flex;/*icindeki elementler yan yanadi author :mrxak3r*/
   align-items: center;
   justify-content: center;
